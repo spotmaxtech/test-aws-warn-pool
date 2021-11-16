@@ -24,6 +24,8 @@ func main() {
 	logger.Printf("service[%d] started...", pid)
 
 	for i := 1; i > 0; i++ {
+		t := time.Now()
+		logger.Printf("run time --> %v", t.Format("2006-01-02 15:04:05"))
 		time.Sleep(time.Second * 1)
 		logger.Printf("service[%d]: %d", pid, i)
 	}
